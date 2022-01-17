@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Guru - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+
+    <!-- CSS Calendar -->
+    <link rel="stylesheet" href="get.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- slider css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body id="page-top" class="body">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #3992e4">
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center my-4" href="GuruDashboard.html">
+          <div class="sidebar-brand-icon">
+            <img src="logobaruku.png" alt="amikomLogo" href="Dashboard.html" class="mx-auto d-block my-5" width="60px" height="60px" />
+            <!-- <i class="fas fa-laugh-wink"></i> -->
+          </div>
+          <div class="sidebar-brand-text mx-1">We Learning</div>
+        </a>
+        <!-- <img src="logobaruku.png" alt="amikomLogo" href="Dashboard.html" class="mx-auto d-block my-5" width="90px" height="90px" /> -->
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="GuruDashboard.html">
+            <i class="fas fa-fw fa-tachometer-alt" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Dashboard</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="GuruSchedule.html">
+            <i class="fas fa-fw fa-calendar" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Schedules</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="GuruScore.html">
+            <i class="fas fa-fw fa-medal" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Score</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-clipboard-list" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Task</span>
+          </a>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="">Task Post</a>
+              <a class="collapse-item" href="">Task Students</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="GuruLesson.html">
+            <i class="fas fa-fw fa-book" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Lesson</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">
+            <i class="fas fa-fw fa-cog" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Settings</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">
+            <i class="fas fa-fw fa-sign-out-alt" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Logout</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+            <!-- NAMA -->
+            <h5 class="mt-3" style="color: black; margin-left: 10px"><b>Hi, Irawati!</b></h5>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - Alerts -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bell fa-lg" style="color: #c4c4c4"></i>
+                  <!-- Counter - Alerts -->
+                  <span class="badge badge-danger badge-counter">3+</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                  <h6 class="dropdown-header">Notification</h6>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-primary">
+                        <i class="fas fa-tasks text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">November 13, 2021</div>
+                      <span class="font-weight-bold"> Fadillah Nur Istiqomah and 31 others has submitted for <b>Tugas Virus 12 IPA 7</b>. </span>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-success">
+                        <i class="fas fa-tasks text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">November 6, 2021</div>
+                      <span class="font-weight-bold"> Fathan Azka Pradana and 31 others has submitted for <b>Latihan Materi Genetika</b>.</span>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-warning">
+                        <i class="fas fa-tasks text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">Oktober 27, 2021</div>
+                      <span class="font-weight-bold"> Siti Suharyanti and 31 others has submitted for <b>Makhluk Hidup 12 IPA 7</b>.</span>
+                    </div>
+                  </a>
+                  <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                </div>
+              </li>
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span> -->
+                  <img class="img-profile rounded-circle" src="img/undraw_profile.svg" />
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="Profile.html">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Settings
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Activity Log
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-9" style="padding-right: 40px">
+                <!-- Info -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                  <h1 class="h3 mb-0 text-gray-800">Info</h1>
+                </div>
+
+                <!-- Content Row -->
+                <div class="row">
+                  <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-primary shadow h-100 py-2">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div class="h6 font-weight-bold text-light mb-2">Jumlah Siswa</div>
+                            <div class="h4 font-weight-bold text-light my-2">30</div>
+                            <div class="text-light">detail <i class="fas fa-angle-double-right ml-2"></i></div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fas fa-user-graduate text-gray-300 my-1" style="font-size: 65px"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Completed -->
+                  <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-success shadow h-100 py-2">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center my-2">
+                          <div class="col-8 mr-3">
+                            <div class="h4 mb-2 font-weight-bold text-light">3 </div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fas fa-check-circle text-light fa-2x my-2"></i>
+                          </div>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                          <div class="font-weight-bold text-light mb-1">Completed</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- In Progress -->
+                  <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-warning shadow h-100 py-2">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center my-2">
+                          <div class="col-8 mr-3">
+                            <div class="h4 mb-2 font-weight-bold text-light">4 </div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fas fa-redo text-warning bg-light p-2 rounded-circle my-2" style="font-size: 18px;"></i>
+                          </div>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                          <div class="font-weight-bold text-light mb-1">In Progress</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Missing -->
+                  <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-danger shadow h-100 py-2">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center my-2">
+                          <div class="col-8 mr-3">
+                            <div class="h4 mb-2 font-weight-bold text-light">0</div>
+                            <!-- <div class="font-weight-bold text-info mb-1">Missing</div> -->
+                          </div>
+                          <div class="col-auto ">
+                            <i class="fas fa-times-circle text-light fa-2x my-2"></i>
+                          </div>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                          <div class="font-weight-bold text-light mb-1">Missing</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Task For Today -->
+                <div class="row mt-2">
+                  <div class="col-sm-5">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                      <h1 class="h3 mb-0 text-gray-800">Task For Today</h1>
+                    </div>
+
+                    <!-- Task 1 -->
+                    <div class="row ml-1 my-3" >
+                      <div class="card border-left-warna-4 shadow h-100 py-2 px-1" style="width: 330px;">
+                        <div class="card-body" >
+                          <div class="row">
+                            <div class="col-9">
+                              <div class="row no-gutters align-items-center mb-2">
+                                <div class="col-1">
+                                  <i class="fas fa-info-circle" style="font-size: 25px"></i>
+                                </div>
+                                <div class="col-11 pl-3">
+                                  <div class="font-weight-bold text-dark">Biologi</div>
+                                </div>
+                              </div>
+                              <div class="row mt-3">
+                                <div class="col-4">
+                                  <p class="bg-light p-2 rounded-pill text-dark font-weight-bold mb-3 text-center" style="width: 60px; font-size: 12px">Bab 3</p>
+                                </div>
+                                <div class="col-8">
+                                  <p class="bg-light p-2 rounded-pill text-dark font-weight-bold mb-3 text-center" style="width: 60px; font-size: 12px">23.59</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="bg-gray-300 kelas-tguru text-dark font-weight-bold" style="margin-left: -5px;">12 IPA 4</div>
+                            </div>
+                        </div>
+                        <div class="text-dark">Materi Genetik</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Task 1 -->
+                  <div class="row ml-1 my-3">
+                    <div class="card border-left-warna-4 shadow h-100 py-2 px-1" style="width: 330px;">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-9">
+                            <div class="row no-gutters align-items-center mb-2">
+                              <div class="col-1">
+                                <i class="fas fa-info-circle" style="font-size: 25px"></i>
+                              </div>
+                              <div class="col-11 pl-3">
+                                <div class="font-weight-bold text-dark">Biologi Lintas Minat</div>
+                              </div>
+                            </div>
+                            <div class="row mt-3">
+                              <div class="col-4">
+                                <p class="bg-light p-2 rounded-pill text-dark font-weight-bold mb-3 text-center" style="width: 60px; font-size: 12px">Bab 3</p>
+                              </div>
+                              <div class="col-8">
+                                <p class="bg-light p-2 rounded-pill text-dark font-weight-bold mb-3 text-center" style="width: 60px; font-size: 12px">12.00</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="bg-gray-300 kelas-tguru text-dark font-weight-bold mr-2" style="margin-left: -5px;">10 IPS 1</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">Virus</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Task 1 -->
+                <div class="row ml-1 my-3">
+                  <div class="card border-left-warna-4 shadow h-100 py-2 px-1" style="width: 330px;">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-9">
+                          <div class="row no-gutters align-items-center mb-2">
+                            <div class="col-1">
+                              <i class="fas fa-info-circle" style="font-size: 25px"></i>
+                            </div>
+                            <div class="col-11 pl-3">
+                              <div class="font-weight-bold text-dark">Biologi</div>
+                            </div>
+                          </div>
+                          <div class="row mt-3">
+                            <div class="col-4">
+                              <p class="bg-light p-2 rounded-pill text-dark font-weight-bold mb-3 text-center" style="width: 60px; font-size: 12px">Bab 2</p>
+                            </div>
+                            <div class="col-8">
+                              <p class="bg-light p-2 rounded-pill text-dark font-weight-bold mb-3 text-center" style="width: 60px; font-size: 12px">23.59</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="bg-gray-300 kelas-tguru text-dark font-weight-bold" style="margin-left: -5px;">11 IPA 3</div>
+                        </div>
+                      </div>
+                    <div class="text-dark">Struktur dan Fungsi Jaringan Tumbuhan</div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                <div class="col-sm-7">
+                  <!-- <div class="d-sm-flex align-items-center justify-content-between mb-4"> -->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h1 class="h3 mb-0 text-gray-800">My Notes</h1>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="float-right">
+                          <button type="button" class="btn btn-transparent" style="color: #3992e4;border: #3992e4 solid 2px;">+ Add Notes</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="my-3">
+                      <div class="card shadow">
+                        <div class="card-body see-all">
+                          <div class="row">
+                            <div class="col-sm-1">
+                              <i class="far fa-file note-guru"></i>
+                            </div>
+                            <div class="col-sm-11">
+                              <div class="ml-3">
+                                <div class="row">
+                                  <div class="col-11">
+                                    <div class="font-weight-bold my-1 text-dark">Menyiapkan Materi Pembelajaran</div>
+                                  </div>
+                                  <div class="col-1">
+                                    <div class="btn-group dropleft">
+                                      <button type="button" class="btn-link bg-transparent text-dark" data-toggle="dropdown" aria-expanded="false" style="border: none">
+                                        <div class="float-right">
+                                          <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <p class="my-2">Menyiapkan materi pembelajaran Bab 4 pembelahan sel untuk kelas 12 IPA 6</p>
+                                <div class="font-weight-bold" style="font-size: 14px;">13 Jan 2022</div>
+                              </div>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-1">
+                              <i class="far fa-file note-guru"></i>
+                            </div>
+                            <div class="col-sm-11">
+                              <div class="ml-3">
+                                <div class="row">
+                                  <div class="col-11">
+                                    <div class="font-weight-bold my-1 text-dark">Mengoreksi Tugas Siswa</div>
+                                  </div>
+                                  <div class="col-1">
+                                    <div class="btn-group dropleft">
+                                      <button type="button" class="btn-link bg-transparent text-dark" data-toggle="dropdown" aria-expanded="false" style="border: none">
+                                        <div class="float-right">
+                                          <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Edit</a>
+                                        <a class="dropdown-item" href="#">Delete</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <p class="my-2">Mengoreksi tugas biologi kelas 12 IPA 7</p>
+                                <div class="font-weight-bold" style="font-size: 14px;">13 Jan 2022</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="see-all-text">
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-1">
+                                <i class="far fa-file note-guru"></i>
+                              </div>
+                              <div class="col-sm-11">
+                                <div class="ml-3">
+                                  <div class="row">
+                                    <div class="col-11">
+                                      <div class="font-weight-bold my-1 text-dark">Membuat Soal Ulangan</div>
+                                    </div>
+                                    <div class="col-1">
+                                      <div class="btn-group dropleft">
+                                        <button type="button" class="btn-link bg-transparent text-dark" data-toggle="dropdown" aria-expanded="false" style="border: none">
+                                          <div class="float-right">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                          </div>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                          <a class="dropdown-item" href="#">Edit</a>
+                                          <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <p class="my-2">Membuat soal ulangan Bab 2 struktur dan fungsi jaringan tumbuhan untuk kelas 11 IPA 3</p>
+                                  <div class="font-weight-bold" style="font-size: 14px;">13 Jan 2022</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="float-right text-dark mt-3 mb-2 see-all-button" style="cursor: pointer;">View All Notes</div>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Side-bar Kanan -->
+            <div class="col-md-3 border-left pl-4">
+              <!-- Online User -->
+              <div class="row mb-3">
+                <div>
+                  <h5 class="font-weight-bold text-dark">Online Users</h5>
+                  <div class="mb-2">16 online users (5 minutes)</div>
+                  <div class="row my-2" style="color: black">
+                    <div class="col-sm-1">
+                      <div class="circle1">F</div>
+                    </div>
+                    <div class="col-sm-8 ml-4 mt-1">Fathan Azka Pradana</div>
+                    <div class="col-sm-2 mt-2" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                  </div>
+                  <div class="row my-2" style="color: black">
+                    <div class="col-sm-1">
+                      <div class="circle2">FN</div>
+                    </div>
+                    <div class="col-sm-8 ml-4 mt-1">Fadillah Nur Istiqomah</div>
+                    <div class="col-sm-2 mt-2" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                  </div>
+                  <div class="row my-2" style="color: black">
+                    <div class="col-sm-1">
+                      <div class="circle3">S</div>
+                    </div>
+                    <div class="col-sm-8 ml-4 mt-1">Siti Suharyanti</div>
+                    <div class="col-sm-2 mt-2" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                  </div>
+                  <div class="row my-2" style="color: black">
+                    <div class="col-sm-1">
+                      <div class="circle4">Y</div>
+                    </div>
+                    <div class="col-sm-8 ml-4 mt-1">Yunita Nurisfa Maya S</div>
+                    <div class="col-sm-2 mt-2" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                  </div>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn-link text-gray-600 px-1 bg-transparent" data-toggle="modal" data-target="#exampleModal" style="border: none">Other Users (12 Users)</button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <!-- Scrollable modal -->
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Online Users</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle1">F</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Fathan Azka Pradana</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle2">FN</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Fadillah Nur Istiqomah</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle3">S</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Siti Suharyanti</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle4">Y</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Yunita Nurisfa Maya S</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle5">J</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Jamal Rosid</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle6">W</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Wahyu Sudoro Murti</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle7">FK</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Fathurohman Khairid Fauzan</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle8">A</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Alvita Bonita</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle9">AP</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Agis Putri Suryadi</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle10">M</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Mahatamtama Arya Farabi</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle1">SD</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Shullun Dwisiwi Palaguna</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle2">A</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Andre</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle3">I</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Ikhsan Nur Ramadhan</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle4">FS</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Filla Setyana Junior</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle5">MF</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Muhammad Farhan Juna</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                          <div class="row my-2" style="color: black">
+                            <div class="col-sm-1">
+                              <div class="circle6">MN</div>
+                            </div>
+                            <div class="col-sm-9 ml-2 mt-1">Muhammad Nur Rifqi A</div>
+                            <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px; color: #179814"><i class="fas fa-circle"></i></div>
+                          </div>
+                        </div>
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Calendar -->
+              <div class="row my-4">
+                <div>
+                  <h5 class="font-weight-bold text-dark">Calendar</h5>
+                  <div class="calendar mt-3">
+                    <div class="header">
+                      <a data-action="prev-month" href="javascript:void(0)" title="Previous Month"><i></i></a>
+                      <div class="text" data-render="month-year"></div>
+                      <a data-action="next-month" href="javascript:void(0)" title="Next Month"><i></i></a>
+                    </div>
+                    <div class="months" data-flow="left">
+                      <div class="month month-a">
+                        <div class="render render-a"></div>
+                      </div>
+                      <div class="month month-b">
+                        <div class="render render-b"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Schedule today -->
+              <div class="row my-4">
+                <div>
+                  <h5 class="font-weight-bold text-dark mb-3">Schedule Today</h5>
+                  <div class="row my-2" style="display: block">
+                    <div class="card border-left-warna-1 ml-3 mr-4" style="width: 100%">
+                      <div class="card-body">
+                        <div class="row my-2" style="color: #90e0ef">
+                          <div class="col-1">
+                            <i class="far fa-clock"></i>
+                          </div>
+                          <div class="col-10">Mon, 10 Jan | 07.15</div>
+                        </div>
+                        Biologi Lintas Minat 10 IPS 1
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-2" style="display: block">
+                    <div class="card border-left-warna-2 ml-3 mr-4" style="width: 100%">
+                      <div class="card-body">
+                        <div class="row my-2" style="color: #ffdd00">
+                          <div class="col-1">
+                            <i class="far fa-clock"></i>
+                          </div>
+                          <div class="col-10">Mon, 10 Jan | 09.45</div>
+                        </div>
+                        Biologi 10 IPA 4
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-2" style="display: block">
+                    <div class="card border-left-warna-3 ml-3 mr-4" style="width: 100%">
+                      <div class="card-body">
+                        <div class="row my-2" style="color: #e0aaff">
+                          <div class="col-1">
+                            <i class="far fa-clock"></i>
+                          </div>
+                          <div class="col-10">Mon, 10 Jan | 12.20</div>
+                        </div>
+                        Biologi 11 IPA 5
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End-of Side-bar Kanan -->
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white mt-3">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; WeLearning 2021</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    <!-- JS Calendar -->
+    <script src="get.js"></script>
+
+    <!-- Jquery Slider -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Jquery Slider -->
+    <script src="slider.js"></script>
+
+    <!-- Javascrip View All -->
+    <script src="view-all.js"></script>
+  </body>
+</html>

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Lesson</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+
+    <!-- CSS Calendar -->
+    <link rel="stylesheet" href="get.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  </head>
+
+  <body id="page-top" class="body">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#3992E4;">
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center my-4" href="Dashboard.html">
+          <div class="sidebar-brand-icon">
+            <img src="logobaruku.png" alt="amikomLogo" href="Dashboard.html" class="mx-auto d-block my-5" width="60px" height="60px" />
+              <!-- <i class="fas fa-laugh-wink"></i> -->
+          </div>
+          <div class="sidebar-brand-text mx-1">We Learning</div>
+        </a>
+        <!-- <img src="logobaruku.png" alt="amikomLogo" href="Dashboard.html" class="mx-auto d-block my-5" width="90px" height="90px" /> -->
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+          <a class="nav-link" href="Dashboard.html">
+            <i class="fas fa-fw fa-tachometer-alt" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Dashboard</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Schedules.html">
+            <i class="fas fa-fw fa-calendar" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Schedules</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">
+            <i class="fas fa-fw fa-sticky-note" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Review</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">
+            <i class="fas fa-fw fa-clipboard-list" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Task</span></a
+          >
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="Lesson.html">
+            <i class="fas fa-fw fa-book" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Lesson</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">
+            <i class="fas fa-fw fa-cog" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Settings</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html" >
+            <i class="fas fa-fw fa-sign-out-alt" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Logout</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+                    <!-- NAMA -->
+                      <h5 class="mt-3" style="color: black; margin-left: 10px;"><b>Hi, Fathan!</b></h5>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- TEACHER -->
+                        <div class="collapse navbar-collapse mr-2" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link" href="Teacher.html">
+                                    <i class="fas fa-user-tie fa-lg" style="color: #C4C4C4;"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- END TEACHER -->
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#"id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-lg" style="color: #C4C4C4;"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Notification
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-tasks text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">November 13, 2021</div>
+                                        <span class="font-weight-bold">TUGAS KIMIA is Assigned by Suyanti, S.Pd. </span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                          <i class="fas fa-tasks text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">November 7, 2021</div>
+                                        SOAL LATIHAN VIRUS is Assigned by Irawati, S.Pd.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">November 2, 2021</div>
+                                        Joko Haryanto, S.pd. have uploaded MATERI PUISI
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span> -->
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="Profile.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-9" style="padding-right: 40px">
+                <!-- Choose Lesson -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                  <h1 class="h3 mb-0 text-gray-800">Choose Lesson</h1>
+                </div>
+
+                <!-- Content Row 1 -->
+                <div class="row">
+                  <!-- Lesson 14 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #faae7b">
+                          <div class="h6 font-weight-bold">Kimia 12 IPA 7</div>
+                          <p class="mt-2">Suyanti, S.Pd.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 4 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #ff9500">
+                          <div class="h6 font-weight-bold">Fisika 12 IPA 7</div>
+                          <p class="mt-2">Wahyu Widyastuti, S.Pd.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 6 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #9a8c98">
+                          <div class="h6 font-weight-bold">Matematika Peminatan 12 IPA 7</div>
+                          <p class="mt-2">Wiwiek, S.Pd.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 1 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2" >
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #74c69d">
+                          <div class="h6 font-weight-bold">Biologi 12 IPA 7</div>
+                          <p class="mt-2">Irawati, S.Pd</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 2 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #00b4d8;">
+                          <div class="h6 mb-0 font-weight-bold">Pend Agama Islam 12 IPA 7</div>
+                          <p class="mt-2">Muh Rofi'i, S.Pd.I.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 3 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #e76f51">
+                          <div class="h6 mb-0 font-weight-bold">Bahasa Indonesia 12 IPA 7</div>
+                          <p class="mt-2">Joko Haryanto, S.Pd.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  <!-- Lesson 5 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #dda15e">
+                          <div class="h6 font-weight-bold">Matematika Wajib 12 IPA 7</div>
+                          <p class="mt-2">Dra. Ratih Rahmawati, S.Pd.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 7 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #8e9aaf">
+                          <div class="h6 font-weight-bold">Bahasa Inggris 12 IPA 7</div>
+                          <p class="mt-2">Endra Prasetyana, S.Pd., M.Pd.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 8 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #ff595e">
+                          <div class="h6 font-weight-bold">PJOK 12 IPA 7</div>
+                          <p class="mt-2">Kliwon, S.Pd.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 9 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #9c89b8">
+                          <div class="h6 font-weight-bold">Teknik Informatika 12 IPA 7</div>
+                          <p class="mt-2">Aryanto, S.kom.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 10 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #489fb5">
+                          <div class="h6 font-weight-bold">Bahasa Jawa 12 IPA 7</div>
+                          <p class="mt-2">Abdul Afif Rosyidi, S.Pd.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 11 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #5e548e">
+                          <div class="h6 font-weight-bold">Seni Budaya 12 IPA 7</div>
+                          <p class="mt-2">Dyah Astrianita, S.Pd., M.M.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 12 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #d8a48f">
+                          <div class="h6 font-weight-bold">Kewirausahaan 12 IPA 7</div>
+                          <p class="mt-2">Agustinus Ari Susatya, S.Pd.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Lesson 13 -->
+                  <div class="col-xl-4 col-md-7 mb-4">
+                    <a href="#" class="text-decoration-none">
+                      <div class="card shadow h-100 pb-2">
+                        <div class="card-header py-3 text-light" style="height: 135px;background-color: #d88c9a">
+                          <div class="h6 font-weight-bold">Pendidikan Kewarganegaraan 12 IPA 7</div>
+                          <p class="mt-2">Ervin Iswandayani, S.Pd.</p>
+                        </div>
+                        <div class="card-body" style="height: 100px;">
+                          <img class="rounded-circle float-right" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="" style="width: 60px;height: 60px;margin-top: -50px;">
+                          <div class="progress" style="margin-top: 30px;height: 8px;">
+                            <div class="progress-bar " role="progressbar" style="width: 50%;background-color: #3992E4;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ></div>
+                          </div>
+                          <div class="my-2 text-dark" style="font-size: 13px;">50% Complete</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+              
+              <!-- Side-bar Kanan -->
+              <div class="col-md-3 border-left pl-4">
+                <!-- Online User -->
+                <div class="row mb-3">
+                  <div>
+                    <h5 class="font-weight-bold text-dark">Online Users</h5>
+                    <div class="mb-2">16 online users (5 minutes)</div>
+                    <div class="row my-2" style="color: black;">
+                      <div class="col-sm-1">
+                        <div class="circle1">F</div>
+                      </div>
+                      <div class="col-sm-8 ml-4 mt-1">Fathan Azka Pradana</div>
+                      <div class="col-sm-2 mt-2" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                    </div>
+                    <div class="row my-2" style="color: black;">
+                      <div class="col-sm-1">
+                        <div class="circle2">FN</div>
+                      </div>
+                      <div class="col-sm-8 ml-4 mt-1">Fadillah Nur Istiqomah</div>
+                      <div class="col-sm-2 mt-2" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                    </div>
+                    <div class="row my-2" style="color: black;">
+                      <div class="col-sm-1">
+                        <div class="circle3">S</div>
+                      </div>
+                      <div class="col-sm-8 ml-4 mt-1">Siti Suharyanti</div>
+                      <div class="col-sm-2 mt-2" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                    </div>
+                    <div class="row my-2" style="color: black;">
+                      <div class="col-sm-1">
+                        <div class="circle4">Y</div>
+                      </div>
+                      <div class="col-sm-8 ml-4 mt-1">Yunita Nurisfa Maya S</div>
+                      <div class="col-sm-2 mt-2" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn-link text-gray-600 px-1 bg-transparent" data-toggle="modal" data-target="#exampleModal" style="border: none;">
+                      Other Users (12 Users)
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <!-- Scrollable modal -->
+                      <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Online Users</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle1">F</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Fathan Azka Pradana</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle2">FN</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Fadillah Nur Istiqomah</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle3">S</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Siti Suharyanti</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle4">Y</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Yunita Nurisfa Maya S</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle5">J</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Jamal Rosid</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle6">W</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Wahyu Sudoro Murti</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle7">FK</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Fathurohman Khairid Fauzan</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle8">A</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Alvita Bonita</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle9">AP</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Agis Putri Suryadi</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle10">M</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Mahatamtama Arya Farabi</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle1">SD</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Shullun Dwisiwi Palaguna</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle2">A</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Andre</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle3">I</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Ikhsan Nur Ramadhan</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle4">FS</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Filla Setyana Junior</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle5">MF</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Muhammad Farhan Juna</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle6">MN</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Muhammad Nur Rifqi A</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                          </div>
+                          <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Calendar -->
+                <div class="row my-4"> 
+                  <div>
+                    <h5 class="font-weight-bold text-dark">Calendar</h5>
+                    <div class="calendar mt-3">
+                      <div class="header">
+                        <a data-action="prev-month" href="javascript:void(0)" title="Previous Month"><i></i></a>
+                        <div class="text" data-render="month-year"></div>
+                        <a data-action="next-month" href="javascript:void(0)" title="Next Month"><i></i></a>
+                      </div>
+                      <div class="months" data-flow="left">
+                        <div class="month month-a">
+                          <div class="render render-a"></div>
+                        </div>
+                        <div class="month month-b">
+                          <div class="render render-b"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="row my-4">
+                  <div>
+                    <h5 class="font-weight-bold text-dark mb-3">Upcoming Events</h5>
+                    <div class="row my-2" style="display: block;">
+                      <div class="card border-left-warna-1 ml-3 mr-4" >
+                        <div class="card-body">
+                          <div class="row my-2" style="color: #90e0ef;">
+                            <div class="col-1">
+                              <i class="far fa-clock"></i>
+                            </div>
+                            <div class="col-10">Sat, 25 Dec | 23.59</div>
+                          </div>
+                          Tugas Listrik Statis (Fisika 12 IPA 7)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row my-2" style="display: block;">
+                      <div class="card border-left-warna-2 ml-3 mr-4" >
+                        <div class="card-body">
+                          <div class="row my-2" style="color: #ffdd00;">
+                            <div class="col-1">
+                              <i class="far fa-clock"></i>
+                            </div>
+                            <div class="col-10">Sat, 25 Dec | 23.59</div>
+                          </div>
+                          Tugas Materi Genetik (Biologi 12 IPA 7)
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row my-2" style="display: block;">
+                      <div class="card border-left-warna-3 ml-3 mr-4" >
+                        <div class="card-body">
+                          <div class="row my-2" style="color: #e0aaff;">
+                            <div class="col-1">
+                              <i class="far fa-clock"></i>
+                            </div>
+                            <div class="col-10">Sat, 25 Dec | 23.59</div>
+                          </div>
+                          Tugas Menggambar (Seni Budaya 12 IPA 7)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white mt-3">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; WeLearning 2021</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    <!-- JS Calendar -->
+    <script src="get.js"></script>
+  </body>
+</html>

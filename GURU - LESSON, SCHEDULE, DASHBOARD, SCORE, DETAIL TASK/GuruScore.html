@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Guru - Score</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
+    <!-- Custom styles for this template-->
+    <!-- <link rel="stylesheet" href="stylecal.css"> -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="get.css">
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color:#3992E4;">
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center my-4" href="Dashboard.html">
+          <div class="sidebar-brand-icon">
+            <img src="logobaruku.png" alt="amikomLogo" href="Dashboard.html" class="mx-auto d-block my-5" width="60px" height="60px" />
+              <!-- <i class="fas fa-laugh-wink"></i> -->
+          </div>
+          <div class="sidebar-brand-text mx-1">We Learning</div>
+        </a>
+        <!-- <img src="logobaruku.png" alt="amikomLogo" href="Dashboard.html" class="mx-auto d-block my-5" width="90px" height="90px" /> -->
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+          <a class="nav-link" href="GuruDashboard.html">
+            <i class="fas fa-fw fa-tachometer-alt" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Dashboard</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="GuruSchedule.html">
+            <i class="fas fa-fw fa-calendar" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Schedules</span></a
+          >
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="GuruScore.html">
+            <i class="fas fa-fw fa-medal" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Score</span></a
+          >
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-clipboard-list" style="font-size: 20px"></i>
+                <span style="font-size: 15px">Task</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="">Task Post</a>
+                <a class="collapse-item" href="">Task Students</a>
+              </div>
+            </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="GuruLesson.html">
+            <i class="fas fa-fw fa-book" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Lesson</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">
+            <i class="fas fa-fw fa-cog" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Settings</span></a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html" >
+            <i class="fas fa-fw fa-sign-out-alt" style="font-size: 20px"></i>
+            <span style="font-size: 15px">Logout</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+         <!-- Topbar -->
+         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+                  <!-- NAMA -->
+                    <h5 class="mt-3" style="color: black; margin-left: 10px;"><b>Hi, Irawati!</b></h5>
+
+                  <!-- Topbar Navbar -->
+                  <ul class="navbar-nav ml-auto">
+                      <!-- Nav Item - Alerts -->
+                      <li class="nav-item dropdown no-arrow mx-1">
+                          <a class="nav-link dropdown-toggle" href="#"id="alertsDropdown" role="button"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fas fa-bell fa-lg" style="color: #C4C4C4;"></i>
+                              <!-- Counter - Alerts -->
+                              <span class="badge badge-danger badge-counter">3+</span>
+                          </a>
+                          <!-- Dropdown - Alerts -->
+                          <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                              aria-labelledby="alertsDropdown">
+                              <h6 class="dropdown-header">
+                                  Notification
+                              </h6>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                  <div class="mr-3">
+                                      <div class="icon-circle bg-primary">
+                                          <i class="fas fa-tasks text-white"></i>
+                                      </div>
+                                  </div>
+                                  <div>
+                                      <div class="small text-gray-500">November 13, 2021</div>
+                                      <span class="font-weight-bold">
+                                        Fadillah Nur Istiqomah and 31 others has submitted for <b>Tugas Virus 12 IPA 7</b>. </span>
+                                  </div>
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                  <div class="mr-3">
+                                      <div class="icon-circle bg-success">
+                                        <i class="fas fa-tasks text-white"></i>
+                                      </div>
+                                  </div>
+                                  <div>
+                                      <div class="small text-gray-500">November 6, 2021</div>
+                                      <span class="font-weight-bold">
+                                      Fathan Azka Pradana and 31 others has submitted for <b>Latihan Materi Genetika</b>.</span>
+                                  </div>
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                  <div class="mr-3">
+                                      <div class="icon-circle bg-warning">
+                                          <i class="fas fa-tasks text-white"></i>
+                                      </div>
+                                  </div>
+                                  <div>
+                                      <div class="small text-gray-500">Oktober 27, 2021</div>
+                                      <span class="font-weight-bold">
+                                      Siti Suharyanti and 31 others has submitted for <b>Makhluk Hidup 12 IPA 7</b>.</span>
+                                  </div>
+                              </a>
+                              <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                          </div>
+                      </li>
+                      <div class="topbar-divider d-none d-sm-block"></div>
+
+                      <!-- Nav Item - User Information -->
+                      <li class="nav-item dropdown no-arrow">
+                          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span> -->
+                              <img class="img-profile rounded-circle"
+                                  src="img/undraw_profile.svg">
+                          </a>
+                          <!-- Dropdown - User Information -->
+                          <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                              aria-labelledby="userDropdown">
+                              <a class="dropdown-item" href="Profile.html">
+                                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                  Profile
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                  Settings
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                  Activity Log
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                  Logout
+                              </a>
+                          </div>
+                      </li>
+
+                  </ul>
+        </nav>
+        <!-- End of Topbar -->
+          
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-9" style="padding-right: 40px">
+                <!-- choose lesson -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Students Score</h1>
+                </div>
+
+                <!-- Online Class -->
+                <div class="card shadow mb-4">
+                <!-- <div class="card-header">
+                  <div class="form-group my-2" style="margin-bottom: -3px;">
+                        <select class="form-control my-2" id="exampleFormControlSelect1">
+                          <option>10 IPS 1</option>
+                          <option>10 IPA 1</option>
+                          <option>10 IPA 2</option>
+                          <option>10 IPA 3</option>
+                          <option>11 IPA 4</option>
+                          <option>11 IPA 3</option>
+                          <option>11 IPA 5</option>
+                          <option>11 IPA 6</option>
+                          <option>11 IPS 2</option>
+                          <option>11 IPS 3</option>
+                          <option>12 IPA 4</option>
+                          <option>12 IPA 5</option>
+                          <option>12 IPA 7</option>
+                        </select>
+                  </div>
+                </div> -->
+                <div class="card-body">
+                    <!-- <div class="dropdown mt-2 mb-4" >
+                        <button class="btn  bg-transparent text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style="width: 100%;border-color: #ced4da;">
+                          <div class="row">
+                            <div class="col-11">
+                                <div class="float-left">
+                                    All Classes
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <div class="float-right dropdown-toggle"></div>
+                            </div>
+                          </div>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 100%">
+                          <a class="dropdown-item" href="#">10 IPS 1</a>
+                          <a class="dropdown-item" href="#">10 IPA 1</a>
+                          <a class="dropdown-item" href="#">10 IPA 2</a>
+                          <a class="dropdown-item" href="#">10 IPA 3</a>
+                          <a class="dropdown-item" href="#">11 IPA 4</a>
+                          <a class="dropdown-item" href="#">11 IPA 3</a>
+                          <a class="dropdown-item" href="#">11 IPA 5</a>
+                          <a class="dropdown-item" href="#">11 IPA 6</a>
+                          <a class="dropdown-item" href="#">11 IPS 2</a>
+                          <a class="dropdown-item" href="#">11 IPS 3</a>
+                          <a class="dropdown-item" href="#">12 IPA 4</a>
+                          <a class="dropdown-item" href="#">12 IPA 5</a>
+                          <a class="dropdown-item" href="#">12 IPA 6</a>
+                          <a class="dropdown-item" href="#">12 IPA 7</a>
+                        </div>
+                    </div> -->
+                    
+                    <div class="form-group">
+                        <select class="form-control my-2" id="exampleFormControlSelect1">
+                          <option>10 IPS 1</option>
+                          <option>10 IPA 1</option>
+                          <option>10 IPA 2</option>
+                          <option>10 IPA 3</option>
+                          <option>11 IPA 4</option>
+                          <option>11 IPA 3</option>
+                          <option>11 IPA 5</option>
+                          <option>11 IPA 6</option>
+                          <option>11 IPS 2</option>
+                          <option>11 IPS 3</option>
+                          <option>12 IPA 4</option>
+                          <option>12 IPA 5</option>
+                          <option>12 IPA 7</option>
+                        </select>
+                    </div>
+
+                    <div class="table-responsive mt-4">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Pelajaran</th>
+                            <th>Kelas</th>
+                            <th>Nilai</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td>Fathan Azka Pradana</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">2</td>
+                            <td>Fadillah Nur Istiqomah</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3</td>
+                            <td>Siti Suharyanti</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">4</td>
+                            <td>Yunita Nurisfa Maya S</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">5</td>
+                            <td>Jamal Rosid</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">6</td>
+                            <td>Wahyu Sudoro Murti</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">7</td>
+                            <td>Fathurohman Khairid Fauzan</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">8</td>
+                            <td>Alvita Bonita</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">9</td>
+                            <td>Agis Putri Suryadi</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">10</td>
+                            <td>Mahatamtama Arya Farabi</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">11</td>
+                            <td>Shullun Dwisiwi Palaguna</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">12</td>
+                            <td>Andre</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">13</td>
+                            <td>Ikhsan Nur Ramadhan</td>
+                            <td>Biologi</td>
+                            <td>12 IPA 4</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">14</td>
+                          <td>Filla Setyana Junior</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">15</td>
+                          <td>Muhammad Farhan Juna</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">16</td>
+                          <td>Muhammad Nur Rifqi A</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">17</td>
+                          <td>Dewangga Mantara Sakti</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">18</td>
+                          <td>Mahardika Chandra Nur I</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">19</td>
+                          <td>Nur Asyikin</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">20</td>
+                          <td>Ayu Kurniasari</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">21</td>
+                          <td>Muhammad Luthfi Alghifari</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">22</td>
+                          <td>Muhammad Ihsan Al Bakir</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">23</td>
+                          <td>Bagus Fajar Fadli</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">24</td>
+                          <td>Darman Yusnan Ely</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">25</td>
+                          <td>Bintang Buana Rajasa</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">26</td>
+                          <td>Muhammad Asbi</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">27</td>
+                          <td>David Galih Pradana</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">28</td>
+                          <td>Yehuda Nissi Wattimury</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">29</td>
+                          <td>Wreda Adi Wardana</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">30</td>
+                          <td>Lalu Ibnu Hidayatullah</td>
+                          <td>Biologi</td>
+                          <td>12 IPA 4</td>
+                          <td>96</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                </div>
+                </div>
+              </div>
+              <!-- Side-bar Kanan -->
+              <div class="col-md-3 border-left pl-4">
+                <!-- Online User -->
+                <div class="row mb-3">
+                  <div>
+                    <h5 class="font-weight-bold text-dark">Online Users</h5>
+                    <div class="mb-2">16 online users (5 minutes)</div>
+                    <div class="row my-2" style="color: black;">
+                      <div class="col-sm-1">
+                        <div class="circle1">F</div>
+                      </div>
+                      <div class="col-sm-8 ml-4 mt-1">Fathan Azka Pradana</div>
+                      <div class="col-sm-2 mt-2" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                    </div>
+                    <div class="row my-2" style="color: black;">
+                      <div class="col-sm-1">
+                        <div class="circle2">FN</div>
+                      </div>
+                      <div class="col-sm-8 ml-4 mt-1">Fadillah Nur Istiqomah</div>
+                      <div class="col-sm-2 mt-2" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                    </div>
+                    <div class="row my-2" style="color: black;">
+                      <div class="col-sm-1">
+                        <div class="circle3">S</div>
+                      </div>
+                      <div class="col-sm-8 ml-4 mt-1">Siti Suharyanti</div>
+                      <div class="col-sm-2 mt-2" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                    </div>
+                    <div class="row my-2" style="color: black;">
+                      <div class="col-sm-1">
+                        <div class="circle4">Y</div>
+                      </div>
+                      <div class="col-sm-8 ml-4 mt-1">Yunita Nurisfa Maya S</div>
+                      <div class="col-sm-2 mt-2" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn-link text-gray-600 px-1 bg-transparent" data-toggle="modal" data-target="#exampleModal" style="border: none;">
+                      Other Users (12 Users)
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <!-- Scrollable modal -->
+                      <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Online Users</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle1">F</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Fathan Azka Pradana</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle2">FN</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Fadillah Nur Istiqomah</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle3">S</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Siti Suharyanti</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle4">Y</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Yunita Nurisfa Maya S</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle5">J</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Jamal Rosid</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle6">W</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Wahyu Sudoro Murti</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle7">FK</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Fathurohman Khairid Fauzan</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle8">A</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Alvita Bonita</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle9">AP</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Agis Putri Suryadi</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle10">M</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Mahatamtama Arya Farabi</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle1">SD</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Shullun Dwisiwi Palaguna</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle2">A</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Andre</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle3">I</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Ikhsan Nur Ramadhan</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle4">FS</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Filla Setyana Junior</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle5">MF</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Muhammad Farhan Juna</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                            <div class="row my-2" style="color: black;">
+                              <div class="col-sm-1">
+                                <div class="circle6">MN</div>
+                              </div>
+                              <div class="col-sm-9 ml-2 mt-1">Muhammad Nur Rifqi A</div>
+                              <div class="col-sm-1 mt-2 ml-3" style="font-size: 12px;color: #179814;"><i class="fas fa-circle"></i></div>
+                            </div>
+                          </div>
+                          <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Calendar -->
+                <div class="row my-4"> 
+                  <div>
+                    <h5 class="font-weight-bold text-dark">Calendar</h5>
+                    <div class="calendar mt-3">
+                      <div class="header">
+                        <a data-action="prev-month" href="javascript:void(0)" title="Previous Month"><i></i></a>
+                        <div class="text" data-render="month-year"></div>
+                        <a data-action="next-month" href="javascript:void(0)" title="Next Month"><i></i></a>
+                      </div>
+                      <div class="months" data-flow="left">
+                        <div class="month month-a">
+                          <div class="render render-a"></div>
+                        </div>
+                        <div class="month month-b">
+                          <div class="render render-b"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="row my-4">
+                  <h5 class="font-weight-bold text-dark">Schedule Today</h5>
+                  <div class="col-12 text-center">
+                    <div class="my-3">
+                      <i class="far fa-clock" style="font-size: 100px;"></i>
+                      <!-- <i class="far fa-calendar-check text-gray-300" style="font-size: 100px;"></i> -->
+                    </div>
+                    <div>No Schedule</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of side-bar kanan -->
+            </div>
+            </div>
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white mt-3">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; WeLearning 2021</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+
+    <script src="get.js"></script>
+  </body>
+</html>
